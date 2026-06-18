@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎯 Adivina el Número</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🎯 Adivina el Número</h1>
+            <p class="subtitle">La computadora ha generado un número entre <strong>1</strong> y <strong>100</strong></p>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <!-- Estadísticas del juego -->
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Intentos</span>
+                        <span class="stat-value" id="intentos">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Rango</span>
+                        <span class="stat-value" id="rango">1 - 100</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Mejor Racha</span>
+                        <span class="stat-value" id="mejorRacha">0</span>
+                    </div>
+                </div>
+
+                <!-- Área de juego -->
+                <div class="game-area">
+                    <div class="input-group">
+                        <input 
+                            type="number" 
+                            id="numeroInput" 
+                            placeholder="Ingresa un número"
+                            min="1"
+                            max="100"
+                            autofocus
+                        />
+                        <button id="adivinarBtn" class="btn-primary">
+                            🔍 Adivinar
+                        </button>
+                    </div>
+
+                    <div id="mensaje" class="message">
+                        💡 Ingresa un número y presiona "Adivinar"
+                    </div>
+
+                    <!-- Historial de intentos -->
+                    <div class="history" id="historial">
+                        <h3>📜 Historial de Intentos</h3>
+                        <ul id="historialLista"></ul>
+                    </div>
+                </div>
+
+                <!-- Controles adicionales -->
+                <div class="game-controls">
+                    <button id="reiniciarBtn" class="btn-secondary">
+                        🔄 Nuevo Juego
+                    </button>
+                    <button id="pistaBtn" class="btn-secondary">
+                        💡 Pista
+                    </button>
+                    <button id="reiniciarRachaBtn" class="btn-secondary">
+                        🏆 Reiniciar Racha
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>🎮 Desarrollado con ❤️ usando Vite + Vanilla JS</p>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
